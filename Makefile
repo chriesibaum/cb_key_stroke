@@ -83,9 +83,12 @@ doc:
 
 	
 clean:
+	@rm -rf ./sphinx/source/readme.rst
 	@rm -rf ./sphinx/source/key_stroke.rst
 	@rm -rf ./sphinx/source/modules.rst
 	@rm -rf ./sphinx/source/key_stroke.*.rst
+	@rm -rf ./docs/_sources
+	@rm -rf ./docs/_modules
 	@rm -rf ./sphinx/build
 	
 	@rm -rf ./$(SRCDIR)/__pycache__
