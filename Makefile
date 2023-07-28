@@ -74,19 +74,19 @@ build:
 
 doc:
 	@m2r2 --overwrite  README.md README.rst
-	@mv README.rst docs/source/readme.rst
-	@sphinx-apidoc -f -e -M -o docs/source/ $(SRCDIR)/
-	$(MAKE) -C docs/ html
+	@mv README.rst ./sphinx/source/readme.rst
+	@sphinx-apidoc -f -e -M -o ./sphinx/source/ $(SRCDIR)/
+	$(MAKE) -C ./sphinx/ html
 
 
-	@mv ./docs/build/html/  ./html_doc
+	@mv ./sphinx/build/html/  ./docs
 
 	
 clean:
-	@rm -rf ./docs/source/key_stroke.rst
-	@rm -rf ./docs/source/modules.rst
-	@rm -rf ./docs/source/key_stroke.*.rst
-	@rm -rf ./docs/build
+	@rm -rf ./sphinx/source/key_stroke.rst
+	@rm -rf ./sphinx/source/modules.rst
+	@rm -rf ./sphinx/source/key_stroke.*.rst
+	@rm -rf ./sphinx/build
 	
 	@rm -rf ./$(SRCDIR)/__pycache__
 	@rm -rf ./dist/
