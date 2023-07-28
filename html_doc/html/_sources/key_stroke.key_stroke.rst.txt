@@ -1,0 +1,7 @@
+key\_stroke.key\_stroke module
+==============================
+
+.. automodule:: key_stroke.key_stroke
+   :members:
+   :undoc-members:
+   :show-inheritance:

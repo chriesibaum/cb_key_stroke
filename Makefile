@@ -78,12 +78,15 @@ doc:
 	@sphinx-apidoc -f -e -M -o docs/source/ $(SRCDIR)/
 	$(MAKE) -C docs/ html
 
+
+	@mv ./docs/build/html/  ./html_doc
+
 	
 clean:
 	@rm -rf ./docs/source/key_stroke.rst
 	@rm -rf ./docs/source/modules.rst
 	@rm -rf ./docs/source/key_stroke.*.rst
-# 	@rm -rf ./docs/build
+	@rm -rf ./docs/build
 	
 	@rm -rf ./$(SRCDIR)/__pycache__
 	@rm -rf ./dist/

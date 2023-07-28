@@ -1,0 +1,15 @@
+key\_stroke package
+===================
+
+.. automodule:: key_stroke
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   key_stroke.key_stroke
