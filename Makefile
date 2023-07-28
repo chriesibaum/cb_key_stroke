@@ -2,9 +2,7 @@
 SRCDIR = ./key_stroke
 
 PYFILES = $(wildcard $(SRCDIR)/*.py)
-PYFILES := $(filter-out $(SRCDIR)/mpsLegacy.py, $(PYFILES))
-PYFILES := $(filter-out $(SRCDIR)/mps.py, $(PYFILES))
-PYFILES := $(filter-out $(SRCDIR)/mpsAsicMockExt.py, $(PYFILES))
+
 
 # tools
 E := @echo

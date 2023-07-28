@@ -1,4 +1,4 @@
-# README - Welcome to key_stroke - The Python MP Master Library
+# README - Welcome to key_stroke
 
 
 **key_stroke** is the python key stroke module for all platforms. It can be
