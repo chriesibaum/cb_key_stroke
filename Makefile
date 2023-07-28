@@ -78,8 +78,8 @@ doc:
 	@sphinx-apidoc -f -e -M -o ./sphinx/source/ $(SRCDIR)/
 	$(MAKE) -C ./sphinx/ html
 
-
-	@mv ./sphinx/build/html/  ./docs
+	@rm -rf ./docs
+	@mv -f ./sphinx/build/html/  ./docs
 
 	
 clean:
