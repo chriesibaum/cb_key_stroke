@@ -62,13 +62,15 @@ bandit: $(patsubst %.py,%.bandit,$(PYFILES))
 
 
 check: pycodestyle flake8 pylint bandit
-	$(E) compile all 
+	$(E) compile all
 	@python3 -m compileall -q ./$(SRCDIR)
 
 
 build:
 	$(HATCH) build
-	
+
+install: build
+	@pip install ./dist/key_stroke-*.whl --force-reinstall
 
 doc:
 	@m2r2 --overwrite  README.md README.rst
@@ -79,7 +81,7 @@ doc:
 	@rm -rf ./docs
 	@mv -f ./sphinx/build/html/  ./docs
 
-	
+
 clean:
 	@rm -rf ./sphinx/source/readme.rst
 	@rm -rf ./sphinx/source/key_stroke.rst
@@ -88,12 +90,12 @@ clean:
 	@rm -rf ./docs/_sources
 	@rm -rf ./docs/_modules
 	@rm -rf ./sphinx/build
-	
+
 	@rm -rf ./$(SRCDIR)/__pycache__
 	@rm -rf ./dist/
 
 
 upload:
 	twine upload ./dist/key_stroke-*.tar.gz ./dist/key_stroke-*-py3-none-any.whl
-	
-	
+
+

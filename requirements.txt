@@ -11,3 +11,4 @@ pylint
 flake8
 bandit
 pytest
+twine

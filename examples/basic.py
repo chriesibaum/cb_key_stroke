@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import time
-from key_stroke import *
+from key_stroke import KeyStroke
 
-k = Key_Stroke()
+k = KeyStroke()
 print('Press ESC to terminate!')
 
 while True:
-    
+
     # do your stuff here, for this example we use a sleep and a print instead.
     time.sleep(0.5)
     print('.', end = '', flush = True)

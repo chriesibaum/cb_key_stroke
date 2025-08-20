@@ -15,9 +15,9 @@ import os
 import sys
 
 
-class Key_Stroke_Base():
+class KeyStrokeBase():
     """
-    The key_stroke_base class which provides the core and common methods.
+    The KeyStrokeBase class which provides the core and common methods.
     """
 
     @classmethod
@@ -59,7 +59,7 @@ if 'linux' in sys.platform:
         import tty
         import termios
 
-        class Key_Stroke(Key_Stroke_Base):
+        class KeyStroke(KeyStrokeBase):
             """
             linux KeyStroke implementation for foreground process'
             """
@@ -94,7 +94,7 @@ if 'linux' in sys.platform:
                 c = sys.stdin.read(1)
                 return c
     else:
-        class Key_Stroke(Key_Stroke_Base):
+        class KeyStroke(KeyStrokeBase):
             """
             linux KeyStroke implementation for background process'
             """
@@ -106,9 +106,9 @@ if 'linux' in sys.platform:
 elif 'win' in sys.platform:
     import msvcrt   # pylint: disable=E0401
 
-    class Key_Stroke(Key_Stroke_Base):
+    class KeyStroke(KeyStrokeBase):
         """
-        Fenster Operating System key_stroke implementation
+        "Fensterli" Operating System KeyStroke implementation
         """
 
         def __init__(self):
@@ -136,3 +136,12 @@ elif 'win' in sys.platform:
             c = msvcrt.getch()
             c = c.decode("utf-8")
             return c
+
+else:
+    class KeyStroke(KeyStrokeBase):
+        """
+        Os not detected - KeyStroke is not implemented
+        """
+
+        def __init__(self):
+            raise Exception("KeyStroke is not implemented for this OS: {}".format(sys.platform))

@@ -13,6 +13,6 @@ Thomas
 
 __author__ = "Thomas"
 __copyright__ = "Copyright 2023, Chriesibaum GmbH"
-__version__ = "1.0.1"
+__version__ = "1.3.0"
 
-from key_stroke.key_stroke import *         # noqa: F401 F403
+from .key_stroke import KeyStroke     # noqa: F401
