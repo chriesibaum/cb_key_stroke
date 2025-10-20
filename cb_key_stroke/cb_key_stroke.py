@@ -1,13 +1,14 @@
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2025 Thomas@chriesibaum.dev
 
 """
-key_stroke - The python loop key pressed interupt module
+cb_key_stroke - The python loop key pressed interupt module
 
-key_stroke is a small module to quit/terminate a loop of a console app
+cb_key_stroke is a small module to quit/terminate a loop of a console app
 by simply pressing a key. The beauty is that this module is running on Linux,
 Öpfel-Rechnern as well Fenster operated computers.
 
-Have fun while using the key_stroke module!
+Have fun while using the cb_key_stroke module!
 Thomas
 """
 
@@ -15,7 +16,7 @@ import os
 import sys
 
 
-class KeyStrokeBase():
+class CBKeyStrokeBase():
     """
     The KeyStrokeBase class which provides the core and common methods.
     """
@@ -59,7 +60,7 @@ if 'linux' in sys.platform:
         import tty
         import termios
 
-        class KeyStroke(KeyStrokeBase):
+        class CBKeyStroke(CBKeyStrokeBase):
             """
             linux KeyStroke implementation for foreground process'
             """
@@ -94,7 +95,7 @@ if 'linux' in sys.platform:
                 c = sys.stdin.read(1)
                 return c
     else:
-        class KeyStroke(KeyStrokeBase):
+        class CBKeyStroke(CBKeyStrokeBase):
             """
             linux KeyStroke implementation for background process'
             """
@@ -106,7 +107,7 @@ if 'linux' in sys.platform:
 elif 'win' in sys.platform:
     import msvcrt   # pylint: disable=E0401
 
-    class KeyStroke(KeyStrokeBase):
+    class CBKeyStroke(CBKeyStrokeBase):
         """
         "Fensterli" Operating System KeyStroke implementation
         """
@@ -138,10 +139,11 @@ elif 'win' in sys.platform:
             return c
 
 else:
-    class KeyStroke(KeyStrokeBase):
+    class CBKeyStroke(CBKeyStrokeBase):
         """
         Os not detected - KeyStroke is not implemented
         """
 
         def __init__(self):
-            raise Exception("KeyStroke is not implemented for this OS: {}".format(sys.platform))
+            raise Exception(  # pylint: disable=broad-exception-raised
+                f"KeyStroke is not implemented for this OS: {sys.platform}")

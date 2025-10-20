@@ -6,9 +6,9 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'key_stroke'
-copyright = '2023, Thomas@chriesibaum.com'
-author = 'Thomas@chriesibaum.com'
+project = 'cb_key_stroke'
+copyright = '2025, Thomas@chriesibaum.dev'
+author = 'Thomas@chriesibaum.dev'
 
 import os
 import sys

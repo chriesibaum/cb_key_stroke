@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileCopyrightText: 2025 Thomas@chriesibaum.dev
 
 """
 key_stroke - The python loop key pressed interupt module
@@ -12,7 +13,7 @@ Thomas
 """
 
 __author__ = "Thomas"
-__copyright__ = "Copyright 2023, Chriesibaum GmbH"
-__version__ = "1.3.1"
+__copyright__ = "Copyright 2025, Chriesibaum GmbH"
+__version__ = "1.4.0.dev6"
 
-from .key_stroke import KeyStroke     # noqa: F401
+from .cb_key_stroke import CBKeyStroke     # noqa: F401

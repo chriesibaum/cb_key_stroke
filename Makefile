@@ -1,7 +1,9 @@
 
-SRCDIR = ./key_stroke
+SRCDIR = ./cb_key_stroke
+EXAMPLEDIR = ./examples
 
-PYFILES = $(wildcard $(SRCDIR)/*.py)
+PYFILES = $(wildcard $(SRCDIR)/*.py) \
+		  $(wildcard $(EXAMPLEDIR)/*.py)
 
 
 # tools
