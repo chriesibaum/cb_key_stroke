@@ -1,3 +1,10 @@
+<h1 align="center">
+
+[![pypi](https://img.shields.io/pypi/v/cb_key_stroke.svg)](https://pypi.org/project/cb_key_stroke/)
+[![python](https://img.shields.io/pypi/pyversions/cb_key_stroke.svg)](https://pypi.org/project/cb_key_stroke/)
+
+
+</h1>
 # README - Welcome to Chriesibaum's Key Stroke Module
 
 

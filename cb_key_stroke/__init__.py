@@ -14,6 +14,6 @@ Thomas
 
 __author__ = "Thomas"
 __copyright__ = "Copyright 2025, Chriesibaum GmbH"
-__version__ = "1.4.0"
+__version__ = "1.4.1"
 
 from .cb_key_stroke import CBKeyStroke     # noqa: F401
